@@ -1,0 +1,14 @@
+# Showcase fork only (never part of an upstream pull request).
+version: 1
+app:
+  install: "npm install --no-audit --no-fund"
+  start: npm run storybook -- --port {port} --host 0.0.0.0
+  url: http://localhost:{port}
+  readyPath: /iframe.html
+  readyStatus: 200
+  runtime: node20
+  env:
+    NODE_ENV: development
+demo:
+  maxVideos: 1
+  beforePass: true

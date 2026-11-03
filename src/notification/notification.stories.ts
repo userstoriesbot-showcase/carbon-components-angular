@@ -68,8 +68,8 @@ const ToastTemplate = (args) => ({
 		<cds-toast [notificationObj]="{
 			type: type,
 			title: 'Sample toast',
-			subtitle: 'Sample subtitle message',
-			caption: 'Sample caption',
+			subtitle: subtitle,
+			caption: caption,
 			lowContrast: lowContrast,
 			showClose: showClose
 		}"></cds-toast>
@@ -77,7 +77,9 @@ const ToastTemplate = (args) => ({
 });
 export const Toast = ToastTemplate.bind({});
 Toast.args = {
-	...InlineNotification.args
+	...InlineNotification.args,
+	subtitle: "Sample subtitle message",
+	caption: "Sample caption"
 };
 Toast.argTypes = {
 	...InlineNotification.argTypes
